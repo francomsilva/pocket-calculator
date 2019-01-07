@@ -42,10 +42,13 @@ input[type="text"] {
 #result {
   height: 50px;
   width: auto;
+  height: 100px;
 }
 table {
   height: 400px;
 	width: 400px;
+  margin-left: auto;
+  margin-right: auto;
 }
 td {
   height: 100px;
