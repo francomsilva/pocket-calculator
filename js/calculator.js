@@ -1,4 +1,4 @@
-function display(val) {
+function display () {
   document.getElementById("result").value+=val
 }
 
