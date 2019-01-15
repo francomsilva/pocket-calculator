@@ -2,8 +2,8 @@
 <html>
   <head>
     <title>Calculator Midterm</title>
-    <link rel="stylesheet" href="css/calculator.css">
-    <script src="js/calculator.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/calculator.css">
+    <script type="text/javascript" src="js/calculator.js"></script>
   </head>
   <body>
     <div>
@@ -14,20 +14,25 @@
       <form name="form">
       <table border="2" align:"center">
         <tr>
-          <td colspan="3"><input type="text" id="result"></td>
-          <td><input class="button" type="button" value="C" onclick="calculator.txt.value ='C';"</td>
+          <td colspan="4"><input type="text" id="result"></td>
+        </tr>
+        <tr>
+          <td><input class="button" type="button" value="AC" onclick="calculator.txt.value ='AC';"></td>
+          <td><input class="button" type="button" value="+/-"onclick="positiveOrNegative ();"></td>
+          <td><input class="button" type="button" value="%" onclick="percentOf ();"></td>
+          <td><input class="button" type="button" value="/" onclick="divide ();"></td>
         </tr>
         <tr>
           <td><input class="button" type="button" value="1" onclick="numberInput (1);"></td>
           <td><input class="button" type="button" value="2" onclick="numberInput (2);"></td>
           <td><input class="button" type="button" value="3" onclick="numberInput (3);"></td>
-          <td><input class="button" type="button" value="/" onclick="divide ();"></td>
+          <td><input class="button" type="button" value="*" onclick="multiply ();"></td>
         </tr>
         <tr>
           <td><input class="button" type="button" value="4" onclick="numberInput (4);"></td>
           <td><input class="button" type="button" value="5" onclick="numberInput (5);"></td>
           <td><input class="button" type="button" value="6" onclick="numberInput (6);"></td>
-          <td><input class="button" type="button" value="*" onclick="multiply ();"></td>
+          <td><input class="button" type="button" value="-" onclick="subtract ();"></td>
         </tr>
         <tr>
           <td><input class="button" type="button" value="7" onclick="numberInput (7);"></td>
@@ -36,10 +41,9 @@
           <td><input class="button" type="button" value="+" onclick="add ();"></td>
         </tr>
         <tr>
+          <td colspan="2"><input class="button" type="button" value="0" onclick="numberInput (0);" id="zero"></td>
           <td><input class="button" type="button" value="." onclick="decimal ();"></td>
-          <td><input class="button" type="button" value="0" onclick="numberInput (0);"></td>
           <td><input class="button" type="button" value="=" onclick="equal ();"></td>
-          <td><input class="button" type="button" value="-" onclick="subtract ();"></td>
         </tr>
       </table>
       </form>

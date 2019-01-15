@@ -20,16 +20,10 @@ input[type="button"] {
   width: 100px;
   height: 100px;
 }
-input[type="button"]:hover {
-  background-color:lightgray;
-  color: black;
-  border: solid black 2px;
-  width:100%;
-}
 input[type="text"] {
   background-color:black;
   border: solid orange 2px;
-  width:100%;
+  width: 100px;
   color: orange;
   font-size: 25px;
   text-align: center;
@@ -41,8 +35,7 @@ input[type="text"] {
   margin: auto;
 }
 #result {
-  height: 50px;
-  width: auto;
+  width: 412px;
   height: 100px;
 }
 table {
@@ -76,5 +69,9 @@ margin-right: auto;
 }
 img {
   width: 100px;
+  height: 100px;
+}
+#zero.button {
+  width: 206px;
   height: 100px;
 }
