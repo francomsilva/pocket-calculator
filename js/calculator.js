@@ -11,13 +11,13 @@ var afterEqualLastSym = false;
 var exponentialAlert;
 var firstNegationStatus = false;
   console.log("varStatus", afterEqualLastSym, opInserted, executed, decimalStatInsert, piInsertStatus, decimalNumInsert);
-
+// BREAK //
 function insert(num){
   if(executed == false){
   document.calc.display.value=""
   executed = true;
 }
-
+// BREAK //
 if(num === '*' || num === '/' || num === '+'|| num === '-'){
   if(expressionArray[expressionArray.length - 1] == '+' || expressionArray[expressionArray.length - 1] == '-' || expressionArray[expressionArray.length -1 == '*' || expressionArray[expressionArray.length - 1] == '/']){
     expressionArray.pop();
@@ -26,7 +26,7 @@ if(num === '*' || num === '/' || num === '+'|| num === '-'){
     console.log("raw array" , expressionArray);
   }
 }
-
+// BREAK //
   if(opInserted == false){
     document.calc.display.value = document.calc.display.value + num;
     expressionArray.push(num)
@@ -49,7 +49,7 @@ if(num === '*' || num === '/' || num === '+'|| num === '-'){
     document.getElementById("decimalButton").disabled = true;
     document.getElementById("piButton").disabled = true;
   }
-  
+  // BREAK //
   if(decimalNumInsert == false){
  let commaInput = Number(document.calc.display.value.split(",").join("")).toLocaleString();
  document.calc.display.value = commaInput;
@@ -68,7 +68,7 @@ function clearCalc(){
   firstNegationStatus = false
   console.log("status", afterEqualLastSym, opInserted, executed, decimalStatInsert, piInsertStatus, decimalNumInsert)
     expressionArray = [];
-    
+    // BREAK //
     document.getElementById("buttonNum0").disabled = false;
     document.getElementById("buttonNum1").disabled = false;
     document.getElementById("buttonNum2").disabled = false;
@@ -94,7 +94,7 @@ function clearOnOp(){
   piInsertStatus = false;
   decimalNumInsert = false;
   firstNegationStatus = true;
-  
+  // BREAK //
   document.getElementById("buttonNum0").disabled = false;
   document.getElementById("buttonNum1").disabled = false;
   document.getElementById("buttonNum2").disabled = false;
@@ -115,7 +115,7 @@ function equal(){
   afterEqualLastSym = true;
 
 
-  
+  // BREAK //
   document.getElementById("decimalButton").disabled = true;
   document.getElementById("buttonNum0").disabled = true;
   document.getElementById("buttonNum1").disabled = true;
@@ -128,7 +128,7 @@ function equal(){
   document.getElementById("buttonNum8").disabled = true;
   document.getElementById("buttonNum9").disabled = true;
   document.getElementById("piButton").disabled = true;
-  
+  // BREAK //
   let caclEvaluated= eval(expressionArray.join(''));
   if(expressionArray.join(",").includes("e")){
      exponentialAlert = true;
@@ -147,7 +147,7 @@ function equal(){
     document.calc.display.value = caclEvaluated
   }
 
-
+// BREAK //
   if(document.calc.display.value === "Infinity" || document.calc.display.value === "∞" || document.calc.display.value === "NaN") {
     document.calc.display.value = "ERROR";
   }
@@ -179,16 +179,16 @@ if(afterEqualLastSym == false){
     numsCount = numsCount -1
     console.log("nums", numsCount)
   let amountToBeRemoved = expressionArray.length - numsCount
-  
+  //while loop
   while(expressionArray.length >= amountToBeRemoved){
     expressionArray.pop();
   }
-  
+  //
   document.calc.display.value = Number(document.calc.display.value) / 100
 expressionArray[amountToBeRemoved] = document.calc.display.value
   console.log(expressionArray)
   firstPercent = true;
-  
+  //end of if
 }else{
  let numsCount2 = document.calc.display.value.length
  numsCount2 = numsCount2 - i
@@ -199,7 +199,7 @@ expressionArray.splice(expressionArray.length -1)
   expressionArray.push(document.calc.display.value)
 console.log("array", expressionArray)
 console.log("calcDisplay", document.calc.display.value)
-
+//BREAK//
   if(document.calc.display.value>= 0.9999999){
     let expon= Number(document.calc.display.value)
     console.log(typeof expon);
@@ -219,6 +219,8 @@ console.log("calcDisplay", document.calc.display.value)
 }
 }
 }
+
+
 function decimalInsert(num){
   if(decimalStatInsert == false){
     document.calc.display.value = document.calc.display.value + num
