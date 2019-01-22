@@ -10,44 +10,30 @@
       <h1>Pocket Calculator</h1>
       <h2>Franco Silva A 3/4</h2>
     </div>
-      <div class="calculator">
-      <form name="calculator">
-      <table border="2" align:"center">
-        <tr>
-          <td colspan="4"><inputname = "display" disabled></td>
-        </tr>
-        <tr>
-          <td><input id = "clearButton" type="button" name="allClear" value="AC" onclick="clearCalc();"></td>
-          <td><input id = "negationButton" type="button" name="negation" value="+/-" onclick="negation('+/-');"></td>
-          <td><input id="percentageButton" type = "button" name = "percentage" value = "%" onclick = "percentage('%');"></td>
-          <td><input id = "divisionButton" type = "button" name = "division" value = "/" onclick = "insert('/'); clearOnOp();"></td>
-        </tr>
-        <tr>
-          <td><input id = "buttonNum1" type = "button" name = "one" value = "1" onclick = "insert(1);"></td>
-          <td><input id = "buttonNum2" type = "button" name = "two" value = "2" onclick = "insert(2);"></td>
-          <td><input id = "buttonNum3" type = "button" name = "three" value = "3" onclick = "insert(3);"></td>
-          <td><input id = "multiplcationButton" type = "button" name = "multiplication" value = "*" onclick = "insert('*'); clearOnOp();"></td>
-        </tr>
-        <tr>
-          <td><input id = "buttonNum4" type = "button" name = "four" value = "4" onclick = "insert(4);"></td>
-          <td><input id = "buttonNum5" type = "button" name = "five" value = "5" onclick = "insert(5);"></td>
-          <td><input id = "buttonNum6" type = "button" name = "six" value = "6" onclick = "insert(6);"></td>
-          <td><input id = "subtractionButton" type = "button" name = "subtraction" value = "-" onclick = "insert('-'); clearOnOp();"></td>
-        </tr>
-        <tr>
-          <td><input id = "buttonNum7" type = "button" name = "seven" value = "7" onclick = "insert(7);"></td>
-          <td><input id = "buttonNum8" type = "button" name = "eight" value = "8" onclick = "insert(8);"></td>
-          <td><input id = "buttonNum9" type = "button" name = "nine" value = "9" onclick = "insert(9);"></td>
-          <td><input id = "additionButton" type = "button" name = "addition" value = "+" onclick = "insert('+'); clearOnOp();"></td>
-        </tr>
-        <tr>
-          <td colspan="2"><input id = "buttonNum0" type = "button" name = "zero" value = "0" onclick = "insert(0);"></td>
-          <td><input id = "decimal" type = "button" name = "decimal" value = "." onclick = "decimalInsert('.');"></td>
-          <td><input id = "equalButton" type = "button" name = "equal" value = "=" onclick = "equal();"></td>
-        </tr>
-      </table>
+      <div class=calculator>
+      <form name="calc">
+        <input name="display" disabled>
       </form>
-    </div>
+      </div>
+    <button id="decimalButton" class="calc-buttons" onclick="decimalInsert('.');">.</button>
+    <button id="buttonNum0" class=zero-button onclick="insert(0)">0</button>
+    <button id="buttonNum1" class="number-buttons" onclick="insert(1)">1</button>
+    <button id="buttonNum2" class="number-buttons" onclick="insert(2)">2</button>
+    <button id="buttonNum3" class="number-buttons" onclick="insert(3)">3</button>
+    <button id="buttonNum4" class="number-buttons" onclick="insert(4)">4</button>
+    <button id="buttonNum5" class="number-buttons" onclick="insert(5)">5</button>
+    <button id="buttonNum6" class="number-buttons" onclick="insert(6)">6</button>
+    <button id="buttonNum7" class="number-buttons" onclick="insert(7)">7</button>
+    <button id="buttonNum8" class="number-buttons" onclick="insert(8)">8</button>
+    <button id="buttonNum9" class="number-buttons" onclick="insert(9)">9</button>
+    <button id="equalButton" class="function-buttons" onclick="equal();">=</button>
+    <button id="additionButton" class="function-buttons" onclick="insert('+'); clearOnOp();">+</button>
+    <button id="subtractionButton" class="function-buttons" onclick="insert('-'); clearOnOp();">-</button>
+    <button id="multiplcationButton" class="function-buttons" onclick="insert('*'); clearOnOp();">×</button>
+    <button id="divisionButton" class="function-buttons" onclick="insert('/'); clearOnOp();">÷</button>
+    <button id="clearButton" class="clear-button" onclick="clearCalc()">AC</button>
+    <button id="negationButton" class="top-buttons" onclick="numberNegation();">+/-</button>
+    <button id="percentageButton" class="top-buttons" onclick="numberPercentage();">%</button>
     <div class="marquee">
     <p><b><img src="https://www.ucvts.tec.nj.us/cms/lib/NJ03001805/Centricity/Domain/257/Baseball%20ID.jpg"></b> Larry Miranda Approves !!</p>
   </div>
