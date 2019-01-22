@@ -171,6 +171,9 @@ input{
   border: solid black 2px;
   background-color: black;
 }
+button {
+  border-radius: 50px;
+}  
 .marquee {
 width: 500px;
 line-height: 50px;
