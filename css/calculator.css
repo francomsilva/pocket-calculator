@@ -100,7 +100,7 @@ top:299px;
 }
 
 button:hover {
-  background-color: gray;
+  background-color: red;
   color: white;
 }
 
@@ -169,6 +169,7 @@ input{
   font-size: 60px;
   color: white;
   border: solid black 2px;
+  background-color: black;
 }
 .marquee {
 width: 500px;
