@@ -47,7 +47,6 @@ if(num === '*' || num === '/' || num === '+'|| num === '-'){
     document.getElementById("buttonNum8").disabled = true;
     document.getElementById("buttonNum9").disabled = true;
     document.getElementById("decimalButton").disabled = true;
-    document.getElementById("piButton").disabled = true;
   }
   
   if(decimalNumInsert == false){
@@ -63,10 +62,9 @@ function clearCalc(){
    console.log("iOnClearCalc", i)
   executed = false;
   decimalStatInsert = false;
-  piInsertStatus = false;
   decimalNumInsert = false;
   firstNegationStatus = false
-  console.log("status", afterEqualLastSym, opInserted, executed, decimalStatInsert, piInsertStatus, decimalNumInsert)
+  console.log("status", afterEqualLastSym, opInserted, executed, decimalStatInsert, decimalNumInsert)
     expressionArray = [];
     
     document.getElementById("buttonNum0").disabled = false;
@@ -79,7 +77,6 @@ function clearCalc(){
     document.getElementById("buttonNum7").disabled = false;
     document.getElementById("buttonNum8").disabled = false;
     document.getElementById("buttonNum9").disabled = false;
-    document.getElementById("piButton").disabled = false;
     document.getElementById("decimalButton").disabled = false;
 }
 function clearOnOp(){
@@ -91,7 +88,6 @@ function clearOnOp(){
   document.calc.display.value= 0
   executed = false;
   decimalStatInsert = false;
-  piInsertStatus = false;
   decimalNumInsert = false;
   firstNegationStatus = true;
   
@@ -105,13 +101,11 @@ function clearOnOp(){
   document.getElementById("buttonNum7").disabled = false;
   document.getElementById("buttonNum8").disabled = false;
   document.getElementById("buttonNum9").disabled = false;
- document.getElementById("piButton").disabled = false;
   document.getElementById("decimalButton").disabled = false;
 }
 function equal(){
   symbolStatus = false
   firstPercent = false;
-  piInsertStatus = false;
   afterEqualLastSym = true;
 
 
@@ -127,7 +121,6 @@ function equal(){
   document.getElementById("buttonNum7").disabled = true;
   document.getElementById("buttonNum8").disabled = true;
   document.getElementById("buttonNum9").disabled = true;
-  document.getElementById("piButton").disabled = true;
   
   let caclEvaluated= eval(expressionArray.join(''));
   if(expressionArray.join(",").includes("e")){
