@@ -48,7 +48,7 @@ if(num === '*' || num === '/' || num === '+'|| num === '-'){
     document.getElementById("buttonNum9").disabled = true;
     document.getElementById("decimalButton").disabled = true;
   }
-  
+
   if(decimalNumInsert == false){
  let commaInput = Number(document.calc.display.value.split(",").join("")).toLocaleString();
  document.calc.display.value = commaInput;
@@ -66,7 +66,7 @@ function clearCalc(){
   firstNegationStatus = false
   console.log("status", afterEqualLastSym, opInserted, executed, decimalStatInsert, decimalNumInsert)
     expressionArray = [];
-    
+
     document.getElementById("buttonNum0").disabled = false;
     document.getElementById("buttonNum1").disabled = false;
     document.getElementById("buttonNum2").disabled = false;
@@ -90,7 +90,7 @@ function clearOnOp(){
   decimalStatInsert = false;
   decimalNumInsert = false;
   firstNegationStatus = true;
-  
+
   document.getElementById("buttonNum0").disabled = false;
   document.getElementById("buttonNum1").disabled = false;
   document.getElementById("buttonNum2").disabled = false;
@@ -109,7 +109,7 @@ function equal(){
   afterEqualLastSym = true;
 
 
-  
+
   document.getElementById("decimalButton").disabled = true;
   document.getElementById("buttonNum0").disabled = true;
   document.getElementById("buttonNum1").disabled = true;
@@ -121,7 +121,7 @@ function equal(){
   document.getElementById("buttonNum7").disabled = true;
   document.getElementById("buttonNum8").disabled = true;
   document.getElementById("buttonNum9").disabled = true;
-  
+
   let caclEvaluated= eval(expressionArray.join(''));
   if(expressionArray.join(",").includes("e")){
      exponentialAlert = true;
@@ -155,6 +155,11 @@ function numberNegation(){
     expressionArray[expressionArray.length - expressionArray.length ]= expressionArray[expressionArray.length - expressionArray.length] *-1
     console.log("negatedNumber" , expressionArray)
     firstNegationStatus = true;
+  }
+  if(secondNegationStatus == false){
+    expressionArray[expressionArray.length - expressionArray.length ]= expressionArray[expressionArray.length - expressionArray.length] *-1
+    console.log("negatedNumber" , expressionArray)
+    secondNegationStatus = true;
   }else{
     let whereToNegate = expressionArray.length - numsCountNeg
     while(expressionArray.length >= whereToNegate){
@@ -163,7 +168,6 @@ function numberNegation(){
     expressionArray.push(negValue)
   }
 }
-
 function numberPercentage(){
   document.calc.display.value = document.calc.display.value.split(",").join("")
 if(afterEqualLastSym == false){
@@ -172,16 +176,16 @@ if(afterEqualLastSym == false){
     numsCount = numsCount -1
     console.log("nums", numsCount)
   let amountToBeRemoved = expressionArray.length - numsCount
-  
+
   while(expressionArray.length >= amountToBeRemoved){
     expressionArray.pop();
   }
-  
+
   document.calc.display.value = Number(document.calc.display.value) / 100
 expressionArray[amountToBeRemoved] = document.calc.display.value
   console.log(expressionArray)
   firstPercent = true;
-  
+
 }else{
  let numsCount2 = document.calc.display.value.length
  numsCount2 = numsCount2 - i
