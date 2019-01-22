@@ -6,16 +6,12 @@
     <script type="text/javascript" src="js/calculator.js"></script>
   </head>
     <body onload="clearCalc()">
-    <div>
-      <h1>Pocket Calculator</h1>
-      <h2>Franco Silva A 3/4</h2>
-    </div>
       <div class=calculator>
       <form name="calc">
         <input name="display" disabled>
       </form>
       </div>
-    <button id="decimalButton" class="calc-buttons" onclick="decimalInsert('.');">.</button>
+    <button id="decimalButton" class="number-buttons" onclick="decimalInsert('.');">.</button>
     <button id="buttonNum0" class=zero-button onclick="insert(0)">0</button>
     <button id="buttonNum1" class="number-buttons" onclick="insert(1)">1</button>
     <button id="buttonNum2" class="number-buttons" onclick="insert(2)">2</button>
@@ -34,8 +30,5 @@
     <button id="clearButton" class="clear-button" onclick="clearCalc()">AC</button>
     <button id="negationButton" class="top-buttons" onclick="numberNegation();">+/-</button>
     <button id="percentageButton" class="top-buttons" onclick="numberPercentage();">%</button>
-    <div class="marquee">
-    <p><b><img src="https://www.ucvts.tec.nj.us/cms/lib/NJ03001805/Centricity/Domain/257/Baseball%20ID.jpg"></b> Larry Miranda Approves !!</p>
-  </div>
   </body>
 </html>
